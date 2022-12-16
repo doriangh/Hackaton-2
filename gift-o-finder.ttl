@@ -37,7 +37,6 @@
 <http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe> rdf:type owl:ObjectProperty ,
                                                                   owl:FunctionalProperty ;
                                                          rdfs:domain <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> ;
-                                                         rdfs:range <http://webprotege.stanford.edu/RC2WUxy06AoELtAgD31OGg2> ;
                                                          rdfs:label "hasGender"^^xsd:string .
 
 
@@ -55,6 +54,14 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
                       rdfs:range :Fuel .
 
 
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#doesNotRunOn
+:doesNotRunOn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              owl:inverseOf :runsOn ;
+              rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> ;
+              rdfs:range :Fuel .
+
+
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#drivenBy
 :drivenBy rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf owl:topObjectProperty ;
@@ -70,14 +77,44 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
         rdfs:range <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> .
 
 
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#hasDimension
+:hasDimension rdf:type owl:ObjectProperty ,
+                       owl:AsymmetricProperty ;
+              rdfs:domain <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ;
+              rdfs:range :Dimensions .
+
+
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#hasDisinterest
 :hasDisinterest rdf:type owl:ObjectProperty ;
                 rdfs:domain <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> ;
                 rdfs:label "dislikes"^^xsd:string .
 
 
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#isFrom
+:isFrom rdf:type owl:ObjectProperty ,
+                 owl:TransitiveProperty ;
+        rdfs:domain :Nationality ;
+        rdfs:range :Nationality ;
+        rdfs:label "isFrom"^^xsd:string .
+
+
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#runsOn
-:runsOn rdf:type owl:ObjectProperty .
+:runsOn rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> ;
+        rdfs:range :Fuel ;
+        rdfs:label "runsOn"^^xsd:string .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#transportedWith
+:transportedWith rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ;
+                 rdfs:range <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> ;
+                 rdfs:label "transportedWith"^^xsd:string .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#weatherIs
+:weatherIs rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -88,25 +125,31 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
 :hasAge rdf:type owl:DatatypeProperty ,
                  owl:FunctionalProperty ;
         rdfs:domain <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> ;
-        rdfs:range xsd:positiveInteger .
+        rdfs:range xsd:positiveInteger ;
+        rdfs:label "requiresAge"^^xsd:string .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#hasBeenNaughty
-:hasBeenNaughty rdf:type owl:DatatypeProperty ;
+:hasBeenNaughty rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
                 rdfs:range xsd:boolean ;
-                owl:propertyDisjointWith :hasBeenNice .
+                owl:propertyDisjointWith :hasBeenNice ;
+                rdfs:label "requiresBeingNaughty"^^xsd:string .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#hasBeenNice
-:hasBeenNice rdf:type owl:DatatypeProperty ;
+:hasBeenNice rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
              rdfs:domain <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> ;
-             rdfs:range xsd:boolean .
+             rdfs:range xsd:boolean ;
+             rdfs:label "requiresBeingNice"^^xsd:string .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#isWealthy
 :isWealthy rdf:type owl:DatatypeProperty ;
            rdfs:domain <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> ;
-           rdfs:range xsd:boolean .
+           rdfs:range xsd:boolean ;
+           rdfs:label "isExpensive"^^xsd:string .
 
 
 #################################################################
@@ -115,49 +158,45 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
 
 ###  http://webprotege.stanford.edu/R8TRUkroyU0QaBuitbvnVqI
 <http://webprotege.stanford.edu/R8TRUkroyU0QaBuitbvnVqI> rdf:type owl:Class ;
-                                                         owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                               owl:onProperty <http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe> ;
-                                                                               owl:hasValue <http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu>
-                                                                             ] ;
-                                                         rdfs:subClassOf <http://webprotege.stanford.edu/RmNO3meEIJ7BLR2ZcmM0V1> ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> ;
+                                                         owl:disjointWith :Adult ;
                                                          rdfs:label "Child"^^xsd:string .
-
-
-###  http://webprotege.stanford.edu/RC2WUxy06AoELtAgD31OGg2
-<http://webprotege.stanford.edu/RC2WUxy06AoELtAgD31OGg2> rdf:type owl:Class ;
-                                                         rdfs:label "Gender" .
 
 
 ###  http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY
 <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> rdf:type owl:Class ;
+                                                         rdfs:subClassOf owl:Thing ;
                                                          rdfs:label "Gift"^^xsd:string .
 
 
 ###  http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ
 <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ> rdf:type owl:Class ;
+                                                        rdfs:subClassOf owl:Thing ;
                                                         rdfs:label "Demographic"^^xsd:string .
 
 
 ###  http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy
 <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> rdf:type owl:Class ;
+                                                        rdfs:subClassOf owl:Thing ;
                                                         rdfs:label "Person"^^xsd:string .
-
-
-###  http://webprotege.stanford.edu/RmNO3meEIJ7BLR2ZcmM0V1
-<http://webprotege.stanford.edu/RmNO3meEIJ7BLR2ZcmM0V1> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> ;
-                                                        owl:disjointWith :Male ;
-                                                        rdfs:label "Female"^^xsd:string .
 
 
 ###  http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln
 <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> rdf:type owl:Class ;
+                                                        rdfs:subClassOf owl:Thing ;
                                                         rdfs:label "Transportation" .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Adult
+:Adult rdf:type owl:Class ;
+       rdfs:subClassOf <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> ;
+       rdfs:label "Adult"^^xsd:string .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Age
 :Age rdf:type owl:Class ;
-     rdfs:subClassOf <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ> .
+     rdfs:subClassOf <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ> ;
+     rdfs:label "Age"^^xsd:string .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Air
@@ -167,25 +206,25 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Animal
-:Animal rdf:type owl:Class .
+:Animal rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing ;
+        rdfs:label "Animal"^^xsd:string .
 
 
-###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Child
-:Child rdf:type owl:Class ;
-       owl:equivalentClass [ rdf:type owl:Restriction ;
-                             owl:onProperty <http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe> ;
-                             owl:hasValue <http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh>
-                           ] ;
-       rdfs:subClassOf :Male .
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Dimensions
+:Dimensions rdf:type owl:Class .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Fuel
-:Fuel rdf:type owl:Class .
+:Fuel rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "Fuel"^^xsd:string .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Gender
 :Gender rdf:type owl:Class ;
-        rdfs:subClassOf <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ> .
+        rdfs:subClassOf <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ> ;
+        rdfs:label "Gender"^^xsd:string .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Ground
@@ -194,9 +233,25 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
         rdfs:label "Ground Transportation"^^xsd:string .
 
 
-###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Male
-:Male rdf:type owl:Class ;
-      rdfs:subClassOf <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> .
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Hobby
+:Hobby rdf:type owl:Class ;
+       rdfs:label "Hobby"^^xsd:string .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Instruments
+:Instruments rdf:type owl:Class ;
+             rdfs:label "Instrument"^^xsd:string .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Nationality
+:Nationality rdf:type owl:Class ;
+             rdfs:subClassOf <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ> ;
+             rdfs:label "Nationality"^^xsd:string .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Toy
+:Toy rdf:type owl:Class ;
+     rdfs:label "Toy"^^xsd:string .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Water
@@ -205,56 +260,157 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
        rdfs:label "Water Transportation"^^xsd:string .
 
 
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Weather
+:Weather rdf:type owl:Class .
+
+
 #################################################################
 #    Individuals
 #################################################################
 
 ###  http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu
-<http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu> rdf:type owl:NamedIndividual ;
+<http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu> rdf:type owl:NamedIndividual ,
+                                                                  :Gender ;
+                                                         owl:sameAs :Unisex ;
                                                          rdfs:label "Female" .
 
 
-###  http://webprotege.stanford.edu/RByjEoDVm5vdsmtD7GhLQPJ
-<http://webprotege.stanford.edu/RByjEoDVm5vdsmtD7GhLQPJ> rdf:type owl:NamedIndividual ,
-                                                                  <http://webprotege.stanford.edu/R8TRUkroyU0QaBuitbvnVqI> ,
-                                                                  owl:Thing ;
-                                                         <http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe> <http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh> ;
-                                                         <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> :Cars ;
-                                                         :hasAge "14"^^xsd:byte ;
-                                                         :hasBeenNice "false"^^xsd:boolean ;
-                                                         :isWealthy "true"^^xsd:boolean ;
-                                                         rdfs:label "Ion" .
-
-
 ###  http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh
-<http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh> rdf:type owl:NamedIndividual ;
+<http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh> rdf:type owl:NamedIndividual ,
+                                                                  :Gender ;
+                                                         owl:sameAs :Unisex ;
                                                          rdfs:label "Male" .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Big
+:Big rdf:type owl:NamedIndividual ,
+              :Dimensions .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Cars
 :Cars rdf:type owl:NamedIndividual ,
-               :Ground .
+               <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
+               :Ground ,
+               :Toy ;
+      :runsOn :Diesel ,
+              :Petrol ;
+      rdfs:label "Car"^^xsd:string .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Cats
+:Cats rdf:type owl:NamedIndividual ,
+               <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
+               :Animal ,
+               :Toy ;
+      rdfs:label "Cat"^^xsd:string .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Diesel
+:Diesel rdf:type owl:NamedIndividual ,
+                 :Fuel .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Dogs
+:Dogs rdf:type owl:NamedIndividual ,
+               <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
+               :Animal ,
+               :Toy ;
+      rdfs:label "Dog"^^xsd:string .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Guitar
+:Guitar rdf:type owl:NamedIndividual ,
+                 <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
+                 :Instruments ,
+                 :Toy .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Hamster
+:Hamster rdf:type owl:NamedIndividual ,
+                  <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
+                  :Animal ,
+                  :Toy .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Helicopter
-:Helicopter rdf:type owl:NamedIndividual .
+:Helicopter rdf:type owl:NamedIndividual ,
+                     <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
+                     :Air ,
+                     :Toy .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Hot_Air_Baloon
-:Hot_Air_Baloon rdf:type owl:NamedIndividual .
+:Hot_Air_Baloon rdf:type owl:NamedIndividual ,
+                         <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
+                         :Air ,
+                         :Toy .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Huge
+:Huge rdf:type owl:NamedIndividual ,
+               :Dimensions .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Kerosene
+:Kerosene rdf:type owl:NamedIndividual ,
+                   :Fuel .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Magic
-:Magic rdf:type owl:NamedIndividual .
+:Magic rdf:type owl:NamedIndividual ,
+                :Fuel .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Medium
+:Medium rdf:type owl:NamedIndividual ,
+                 :Dimensions .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Petrol
+:Petrol rdf:type owl:NamedIndividual ,
+                 :Fuel .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Piano
+:Piano rdf:type owl:NamedIndividual ,
+                <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
+                :Instruments ,
+                :Toy .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Plane
 :Plane rdf:type owl:NamedIndividual ,
-                :Air .
+                <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
+                :Air ,
+                :Toy ;
+       :runsOn :Kerosene .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Playing
+:Playing rdf:type owl:NamedIndividual ,
+                  :Hobby ;
+         rdfs:label "Playing"^^xsd:string .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Pool
+:Pool rdf:type owl:NamedIndividual ,
+               <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
+               :Toy ;
+      :weatherIs :Sunny .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Racecars
-:Racecars rdf:type owl:NamedIndividual .
+:Racecars rdf:type owl:NamedIndividual ,
+                   <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
+                   :Ground ,
+                   :Toy ;
+          <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> :Cars ,
+                                                                   :Playing .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Rainy
+:Rainy rdf:type owl:NamedIndividual ,
+                :Weather .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Reindeer
@@ -268,8 +424,66 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
                  :runsOn :Magic .
 
 
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Romania
+:Romania rdf:type owl:NamedIndividual ,
+                  :Nationality .
+
+
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#SUV
-:SUV rdf:type owl:NamedIndividual .
+:SUV rdf:type owl:NamedIndividual ,
+              :Ground ;
+     <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> :Cars ;
+     :runsOn :Diesel ;
+     :hasBeenNice "true"^^xsd:boolean ;
+     :isWealthy "true"^^xsd:boolean .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Singing
+:Singing rdf:type owl:NamedIndividual ,
+                  :Hobby .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Smal
+:Smal rdf:type owl:NamedIndividual ,
+               :Dimensions ;
+      rdfs:label "Small"^^xsd:string .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Snowing
+:Snowing rdf:type owl:NamedIndividual ,
+                  :Weather .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Storm
+:Storm rdf:type owl:NamedIndividual ,
+                :Weather .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Sunny
+:Sunny rdf:type owl:NamedIndividual ,
+                :Weather .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Unisex
+:Unisex rdf:type owl:NamedIndividual ,
+                 :Gender .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Violin
+:Violin rdf:type owl:NamedIndividual ,
+                 <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
+                 :Instruments ,
+                 :Toy ;
+        <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> :Playing ;
+        :hasBeenNaughty "false"^^xsd:boolean ;
+        :hasBeenNice "true"^^xsd:boolean ;
+        :isWealthy "true"^^xsd:boolean .
+
+[ rdf:type owl:NegativePropertyAssertion ;
+   owl:sourceIndividual :Violin ;
+   owl:assertionProperty :hasDisinterest ;
+   owl:targetIndividual :Singing
+ ] .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
