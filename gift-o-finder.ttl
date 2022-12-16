@@ -1,0 +1,206 @@
+@prefix : <urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185> .
+
+<urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185> rdf:type owl:Ontology ;
+                                                                <http://purl.org/dc/elements/1.1/creator> "Adrian Hamod"^^xsd:string ,
+                                                                                                          "Dorian Olarescu"^^xsd:string ;
+                                                                rdfs:label "Gift-o-finder"^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://webprotege.stanford.edu/R7Npv4afvFRkLvgxhbpyi8R
+<http://webprotege.stanford.edu/R7Npv4afvFRkLvgxhbpyi8R> rdf:type owl:AnnotationProperty ;
+                                                         rdfs:label "https://schema.org/gender" .
+
+
+###  http://webprotege.stanford.edu/RCSaijTh71Uo6iuBYo9vzQj
+<http://webprotege.stanford.edu/RCSaijTh71Uo6iuBYo9vzQj> rdf:type owl:AnnotationProperty ;
+                                                         rdfs:label "http://schema.org/Place" .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe
+<http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe> rdf:type owl:ObjectProperty ,
+                                                                  owl:FunctionalProperty ;
+                                                         rdfs:domain <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> ;
+                                                         rdfs:range <http://webprotege.stanford.edu/RC2WUxy06AoELtAgD31OGg2> ;
+                                                         rdfs:label "hasGender"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx
+<http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         owl:propertyDisjointWith :hasDisinterest ;
+                                                         rdfs:label "hasInterest"^^xsd:string .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> ;
+                      rdfs:range :Fuel .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#drivenBy
+:drivenBy rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          owl:inverseOf :drives ;
+          rdfs:domain <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> ;
+          rdfs:range <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> ;
+          owl:propertyDisjointWith :drives .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#drives
+:drives rdf:type owl:ObjectProperty ;
+        rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> ;
+        rdfs:range <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#hasDisinterest
+:hasDisinterest rdf:type owl:ObjectProperty .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#runsOn
+:runsOn rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://webprotege.stanford.edu/R8TRUkroyU0QaBuitbvnVqI
+<http://webprotege.stanford.edu/R8TRUkroyU0QaBuitbvnVqI> rdf:type owl:Class ;
+                                                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe> ;
+                                                                               owl:hasValue <http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu>
+                                                                             ] ;
+                                                         rdfs:subClassOf <http://webprotege.stanford.edu/RmNO3meEIJ7BLR2ZcmM0V1> ;
+                                                         rdfs:label "Child"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/RC2WUxy06AoELtAgD31OGg2
+<http://webprotege.stanford.edu/RC2WUxy06AoELtAgD31OGg2> rdf:type owl:Class ;
+                                                         rdfs:label "Gender" .
+
+
+###  http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY
+<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> rdf:type owl:Class ;
+                                                         rdfs:label "Gift"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ
+<http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ> rdf:type owl:Class ;
+                                                        rdfs:label "Demographic"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy
+<http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> rdf:type owl:Class ;
+                                                        rdfs:label "Person"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/RmNO3meEIJ7BLR2ZcmM0V1
+<http://webprotege.stanford.edu/RmNO3meEIJ7BLR2ZcmM0V1> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> ;
+                                                        owl:disjointWith :Male ;
+                                                        rdfs:label "Female"^^xsd:string .
+
+
+###  http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln
+<http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> rdf:type owl:Class ;
+                                                        rdfs:label "Transportation" .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Age
+:Age rdf:type owl:Class ;
+     rdfs:subClassOf <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ> .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Air
+:Air rdf:type owl:Class ;
+     rdfs:subClassOf <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Animal
+:Animal rdf:type owl:Class .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Child
+:Child rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe> ;
+                             owl:hasValue <http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh>
+                           ] ;
+       rdfs:subClassOf :Male .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Fuel
+:Fuel rdf:type owl:Class .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Gender
+:Gender rdf:type owl:Class ;
+        rdfs:subClassOf <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ> .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Ground
+:Ground rdf:type owl:Class ;
+        rdfs:subClassOf <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Male
+:Male rdf:type owl:Class ;
+      rdfs:subClassOf <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Water
+:Water rdf:type owl:Class ;
+       rdfs:subClassOf <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu
+<http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu> rdf:type owl:NamedIndividual ;
+                                                         rdfs:label "Female" .
+
+
+###  http://webprotege.stanford.edu/RByjEoDVm5vdsmtD7GhLQPJ
+<http://webprotege.stanford.edu/RByjEoDVm5vdsmtD7GhLQPJ> rdf:type owl:NamedIndividual ;
+                                                         rdfs:label "Ion" .
+
+
+###  http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh
+<http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh> rdf:type owl:NamedIndividual ;
+                                                         rdfs:label "Male" .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Magic
+:Magic rdf:type owl:NamedIndividual .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Reindeer
+:Reindeer rdf:type owl:NamedIndividual ,
+                   :Animal .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Reindeer_Sleigh
+:Reindeer_Sleigh rdf:type owl:NamedIndividual ,
+                          :Air ;
+                 :runsOn :Magic .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
