@@ -89,3 +89,19 @@ To determine the appropriate transportation method for each child, you would nee
   :hasWeatherType :WeatherType3 .
 
 :WeatherType1 a :WeatherType
+  rdfs:label "Snowy"
+
+:WeatherType2 a :WeatherType
+  rdfs:label "Rainy"
+
+:WeatherType1 a :WeatherType
+  rdfs:label "Sunny"
+
+:RoadCondition1 a :RoadCondition
+  :hasRoadCondition :Poor  
+
+:RoadCondition2 a :RoadCondition
+  :hasRoadCondition :Good   
+
+:RoadCondition3 a :RoadCondition
+  :hasRoadCondition :Unknown      
