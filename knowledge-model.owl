@@ -1,0 +1,135 @@
+Prefix: : <http://www.santaclaus.com/ontology#>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+Ontology: <http://www.santaclaus.com/ontology>
+
+Class: Child
+  SubClassOf:
+    hasInterest some Interest
+  SubClassOf:
+    hasDemographicProfile some DemographicProfile
+
+Class: Interest
+  SubClassOf:
+    hasInterestType some InterestType
+
+Class: InterestType
+  SubClassOf:
+    hasInterestCategory some InterestCategory
+
+Class: InterestCategory
+
+Class: DemographicProfile
+
+Class: Candy
+  SubClassOf:
+    hasCandyType some CandyType
+
+Class: CandyType
+
+Class: Toy
+  SubClassOf:
+    hasToyType some ToyType
+
+Class: ToyType
+
+Class: MusicInstrument
+  SubClassOf:
+    hasMusicInstrumentType some MusicInstrumentType
+
+Class: MusicInstrumentType
+
+Class: Money
+  SubClassOf:
+    hasCurrency some Currency
+  SubClassOf:
+    hasAmount some xsd:double
+
+Class: Currency
+
+Class: Game
+  SubClassOf:
+    hasGameType some GameType
+
+Class: GameType
+
+Class: TransportationMethod
+  SubClassOf:
+    hasTransportationMethodType some TransportationMethodType
+
+Class: TransportationMethodType
+
+Class: DeliveryMethod
+  SubClassOf:
+    hasDeliveryMethodType some DeliveryMethodType
+
+Class: DeliveryMethodType
+
+Class: Weather
+  SubClassOf:
+    hasWeatherType some WeatherType
+
+Class: WeatherType
+
+Class: RoadCondition
+  SubClassOf:
+    hasRoadConditionType some RoadConditionType
+
+Class: RoadConditionType
+
+ObjectProperty: hasInterest
+  Domain: Child
+  Range: Interest
+
+ObjectProperty: hasInterestType
+  Domain: Interest
+  Range: InterestType
+
+ObjectProperty: hasInterestCategory
+  Domain: InterestType
+  Range: InterestCategory
+
+ObjectProperty: hasDemographicProfile
+  Domain: Child
+  Range: DemographicProfile
+
+ObjectProperty: hasCandyType
+  Domain: Candy
+  Range: CandyType
+
+ObjectProperty: hasToyType
+  Domain: Toy
+  Range: ToyType
+
+ObjectProperty: hasMusicInstrumentType
+  Domain: MusicInstrument
+  Range: MusicInstrumentType
+
+ObjectProperty: hasCurrency
+  Domain: Money
+  Range: Currency
+
+ObjectProperty: hasAmount
+  Domain: Money
+  Range: xsd:double
+
+ObjectProperty: hasGameType
+  Domain: Game
+  Range: GameType
+
+ObjectProperty: hasTransportationMethodType
+  Domain: TransportationMethod
+  Range: TransportationMethodType
+
+ObjectProperty: hasDeliveryMethodType
+  Domain: DeliveryMethod
+  Range: DeliveryMethodType
+
+ObjectProperty: hasWeatherType
+  Domain: Weather
+  Range: WeatherType
+
+ObjectProperty: hasRoadConditionType
+  Domain: RoadCondition
+  Range: RoadConditionType
+
