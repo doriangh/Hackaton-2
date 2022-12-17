@@ -1,0 +1,4 @@
+Here are a few examples of queries (in Manchester synthax) that can be used to retrieve gifts based on children's preferences and the gift's characteristics:
+
+likes value Car
+likes value Playing and hasGender value Female

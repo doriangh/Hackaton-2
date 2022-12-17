@@ -37,7 +37,7 @@
 <http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe> rdf:type owl:ObjectProperty ,
                                                                   owl:FunctionalProperty ;
                                                          rdfs:domain <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> ;
-                                                         rdfs:label "hasGender"^^xsd:string .
+                                                         rdfs:label "usedByGender"^^xsd:string .
 
 
 ###  http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx
@@ -114,7 +114,8 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#weatherIs
-:weatherIs rdf:type owl:ObjectProperty .
+:weatherIs rdf:type owl:ObjectProperty ;
+           rdfs:label "usedWhenWeatherIs"^^xsd:string .
 
 
 #################################################################
@@ -212,7 +213,8 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Dimensions
-:Dimensions rdf:type owl:Class .
+:Dimensions rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Fuel
@@ -249,6 +251,12 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
              rdfs:label "Nationality"^^xsd:string .
 
 
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#RoadCondition
+:RoadCondition rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Road Conditions"^^xsd:string .
+
+
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Toy
 :Toy rdf:type owl:Class ;
      rdfs:label "Toy"^^xsd:string .
@@ -261,7 +269,8 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Weather
-:Weather rdf:type owl:Class .
+:Weather rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing .
 
 
 #################################################################
@@ -280,6 +289,15 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
                                                                   :Gender ;
                                                          owl:sameAs :Unisex ;
                                                          rdfs:label "Male" .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Barbie_Doll
+:Barbie_Doll rdf:type owl:NamedIndividual ,
+                      <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
+                      :Toy ;
+             <http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe> <http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu> ;
+             <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> :Playing ;
+             :isWealthy "false"^^xsd:boolean .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Big
@@ -303,6 +321,11 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
                :Animal ,
                :Toy ;
       rdfs:label "Cat"^^xsd:string .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Cloudy
+:Cloudy rdf:type owl:NamedIndividual ,
+                 :Weather .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Diesel
@@ -351,6 +374,11 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
                :Dimensions .
 
 
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Icy
+:Icy rdf:type owl:NamedIndividual ,
+              :RoadCondition .
+
+
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Kerosene
 :Kerosene rdf:type owl:NamedIndividual ,
                    :Fuel .
@@ -396,7 +424,11 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
 :Pool rdf:type owl:NamedIndividual ,
                <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> ,
                :Toy ;
-      :weatherIs :Sunny .
+      <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> :Swimming ;
+      :hasDimension :Big ;
+      :weatherIs :Cloudy ,
+                 :Sunny ;
+      :isWealthy "true"^^xsd:boolean .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Racecars
@@ -429,6 +461,11 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
                   :Nationality .
 
 
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Rough
+:Rough rdf:type owl:NamedIndividual ,
+                :RoadCondition .
+
+
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#SUV
 :SUV rdf:type owl:NamedIndividual ,
               :Ground ;
@@ -449,6 +486,11 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
       rdfs:label "Small"^^xsd:string .
 
 
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Smooth
+:Smooth rdf:type owl:NamedIndividual ,
+                 :RoadCondition .
+
+
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Snowing
 :Snowing rdf:type owl:NamedIndividual ,
                   :Weather .
@@ -462,6 +504,11 @@ owl:topObjectProperty rdfs:domain <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJ
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Sunny
 :Sunny rdf:type owl:NamedIndividual ,
                 :Weather .
+
+
+###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Swimming
+:Swimming rdf:type owl:NamedIndividual ,
+                   :Hobby .
 
 
 ###  urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#Unisex

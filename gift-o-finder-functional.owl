@@ -1,0 +1,526 @@
+Prefix(:=<urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185>
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Adrian Hamod"^^xsd:string)
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Dorian Olarescu"^^xsd:string)
+Annotation(rdfs:label "Gift-o-finder"^^xsd:string)
+
+Declaration(Class(<http://webprotege.stanford.edu/R8TRUkroyU0QaBuitbvnVqI>))
+Declaration(Class(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>))
+Declaration(Class(<http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ>))
+Declaration(Class(<http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>))
+Declaration(Class(<http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>))
+Declaration(Class(:Adult))
+Declaration(Class(:Age))
+Declaration(Class(:Air))
+Declaration(Class(:Animal))
+Declaration(Class(:Dimensions))
+Declaration(Class(:Fuel))
+Declaration(Class(:Gender))
+Declaration(Class(:Ground))
+Declaration(Class(:Hobby))
+Declaration(Class(:Instruments))
+Declaration(Class(:Nationality))
+Declaration(Class(:RoadConditions))
+Declaration(Class(:Toy))
+Declaration(Class(:Water))
+Declaration(Class(:Weather))
+Declaration(ObjectProperty(<http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe>))
+Declaration(ObjectProperty(<http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx>))
+Declaration(ObjectProperty(:doesNotRunOn))
+Declaration(ObjectProperty(:drivenBy))
+Declaration(ObjectProperty(:drives))
+Declaration(ObjectProperty(:hasDimension))
+Declaration(ObjectProperty(:hasDisinterest))
+Declaration(ObjectProperty(:isFrom))
+Declaration(ObjectProperty(:runsOn))
+Declaration(ObjectProperty(:transportedWith))
+Declaration(ObjectProperty(:weatherIs))
+Declaration(DataProperty(:hasAge))
+Declaration(DataProperty(:hasBeenNaughty))
+Declaration(DataProperty(:hasBeenNice))
+Declaration(DataProperty(:isWealthy))
+Declaration(NamedIndividual(<http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu>))
+Declaration(NamedIndividual(<http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh>))
+Declaration(NamedIndividual(:Big))
+Declaration(NamedIndividual(:Cars))
+Declaration(NamedIndividual(:Cats))
+Declaration(NamedIndividual(:Cloudy))
+Declaration(NamedIndividual(:Diesel))
+Declaration(NamedIndividual(:Dogs))
+Declaration(NamedIndividual(:Guitar))
+Declaration(NamedIndividual(:Hamster))
+Declaration(NamedIndividual(:Helicopter))
+Declaration(NamedIndividual(:Hot_Air_Baloon))
+Declaration(NamedIndividual(:Huge))
+Declaration(NamedIndividual(:Icy))
+Declaration(NamedIndividual(:Kerosene))
+Declaration(NamedIndividual(:Magic))
+Declaration(NamedIndividual(:Medium))
+Declaration(NamedIndividual(:Petrol))
+Declaration(NamedIndividual(:Piano))
+Declaration(NamedIndividual(:Plane))
+Declaration(NamedIndividual(:Playing))
+Declaration(NamedIndividual(:Pool))
+Declaration(NamedIndividual(:Racecars))
+Declaration(NamedIndividual(:Rainy))
+Declaration(NamedIndividual(:Reindeer))
+Declaration(NamedIndividual(:Reindeer_Sleigh))
+Declaration(NamedIndividual(:Romania))
+Declaration(NamedIndividual(:Rough))
+Declaration(NamedIndividual(:SUV))
+Declaration(NamedIndividual(:Singing))
+Declaration(NamedIndividual(:Smal))
+Declaration(NamedIndividual(:Snowing))
+Declaration(NamedIndividual(:Storm))
+Declaration(NamedIndividual(:Sunny))
+Declaration(NamedIndividual(:Swimming))
+Declaration(NamedIndividual(:Unisex))
+Declaration(NamedIndividual(:Violin))
+Declaration(NamedIndividual(:smooth))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
+Declaration(AnnotationProperty(<http://webprotege.stanford.edu/R7Npv4afvFRkLvgxhbpyi8R>))
+Declaration(AnnotationProperty(<http://webprotege.stanford.edu/RCSaijTh71Uo6iuBYo9vzQj>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://webprotege.stanford.edu/R7Npv4afvFRkLvgxhbpyi8R> (https://schema.org/gender)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/R7Npv4afvFRkLvgxhbpyi8R> "https://schema.org/gender")
+
+# Annotation Property: <http://webprotege.stanford.edu/RCSaijTh71Uo6iuBYo9vzQj> (http://schema.org/Place)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/RCSaijTh71Uo6iuBYo9vzQj> "http://schema.org/Place")
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe> (hasGender)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe> "hasGender"^^xsd:string)
+FunctionalObjectProperty(<http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe>)
+ObjectPropertyDomain(<http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe> <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>)
+
+# Object Property: <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> (likes)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> "likes"^^xsd:string)
+SubObjectPropertyOf(<http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> owl:topObjectProperty)
+ObjectPropertyDomain(<http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>)
+ObjectPropertyRange(<http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>)
+DisjointObjectProperties(<http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> :hasDisinterest)
+
+# Object Property: owl:topObjectProperty (owl:topObjectProperty)
+
+ObjectPropertyDomain(owl:topObjectProperty <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>)
+ObjectPropertyRange(owl:topObjectProperty :Fuel)
+
+# Object Property: :doesNotRunOn (:doesNotRunOn)
+
+SubObjectPropertyOf(:doesNotRunOn owl:topObjectProperty)
+InverseObjectProperties(:doesNotRunOn :runsOn)
+ObjectPropertyDomain(:doesNotRunOn <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>)
+ObjectPropertyRange(:doesNotRunOn :Fuel)
+
+# Object Property: :drivenBy (:drivenBy)
+
+SubObjectPropertyOf(:drivenBy owl:topObjectProperty)
+InverseObjectProperties(:drivenBy :drives)
+ObjectPropertyDomain(:drivenBy <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>)
+ObjectPropertyRange(:drivenBy <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>)
+DisjointObjectProperties(:drivenBy :drives)
+
+# Object Property: :drives (:drives)
+
+ObjectPropertyDomain(:drives <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>)
+ObjectPropertyRange(:drives <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>)
+
+# Object Property: :hasDimension (:hasDimension)
+
+AsymmetricObjectProperty(:hasDimension)
+ObjectPropertyDomain(:hasDimension <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>)
+ObjectPropertyRange(:hasDimension :Dimensions)
+
+# Object Property: :hasDisinterest (dislikes)
+
+AnnotationAssertion(rdfs:label :hasDisinterest "dislikes"^^xsd:string)
+ObjectPropertyDomain(:hasDisinterest <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>)
+
+# Object Property: :isFrom (isFrom)
+
+AnnotationAssertion(rdfs:label :isFrom "isFrom"^^xsd:string)
+TransitiveObjectProperty(:isFrom)
+ObjectPropertyDomain(:isFrom :Nationality)
+ObjectPropertyRange(:isFrom :Nationality)
+
+# Object Property: :runsOn (runsOn)
+
+AnnotationAssertion(rdfs:label :runsOn "runsOn"^^xsd:string)
+SubObjectPropertyOf(:runsOn owl:topObjectProperty)
+ObjectPropertyDomain(:runsOn <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>)
+ObjectPropertyRange(:runsOn :Fuel)
+
+# Object Property: :transportedWith (transportedWith)
+
+AnnotationAssertion(rdfs:label :transportedWith "transportedWith"^^xsd:string)
+ObjectPropertyDomain(:transportedWith <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>)
+ObjectPropertyRange(:transportedWith <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>)
+
+# Object Property: :weatherIs (usedWhenWeatherIs)
+
+AnnotationAssertion(rdfs:label :weatherIs "usedWhenWeatherIs"^^xsd:string)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :hasAge (requiresAge)
+
+AnnotationAssertion(rdfs:label :hasAge "requiresAge"^^xsd:string)
+FunctionalDataProperty(:hasAge)
+DataPropertyDomain(:hasAge <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>)
+DataPropertyRange(:hasAge xsd:positiveInteger)
+
+# Data Property: :hasBeenNaughty (requiresBeingNaughty)
+
+AnnotationAssertion(rdfs:label :hasBeenNaughty "requiresBeingNaughty"^^xsd:string)
+FunctionalDataProperty(:hasBeenNaughty)
+DataPropertyRange(:hasBeenNaughty xsd:boolean)
+DisjointDataProperties(:hasBeenNaughty :hasBeenNice)
+
+# Data Property: :hasBeenNice (requiresBeingNice)
+
+AnnotationAssertion(rdfs:label :hasBeenNice "requiresBeingNice"^^xsd:string)
+FunctionalDataProperty(:hasBeenNice)
+DataPropertyDomain(:hasBeenNice <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>)
+DataPropertyRange(:hasBeenNice xsd:boolean)
+
+# Data Property: :isWealthy (isExpensive)
+
+AnnotationAssertion(rdfs:label :isWealthy "isExpensive"^^xsd:string)
+DataPropertyDomain(:isWealthy <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>)
+DataPropertyRange(:isWealthy xsd:boolean)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://webprotege.stanford.edu/R8TRUkroyU0QaBuitbvnVqI> (Child)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/R8TRUkroyU0QaBuitbvnVqI> "Child"^^xsd:string)
+SubClassOf(<http://webprotege.stanford.edu/R8TRUkroyU0QaBuitbvnVqI> <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>)
+DisjointClasses(<http://webprotege.stanford.edu/R8TRUkroyU0QaBuitbvnVqI> :Adult)
+
+# Class: <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> (Gift)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> "Gift"^^xsd:string)
+SubClassOf(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> owl:Thing)
+
+# Class: <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ> (Demographic)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ> "Demographic"^^xsd:string)
+SubClassOf(<http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ> owl:Thing)
+
+# Class: <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> (Person)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> "Person"^^xsd:string)
+SubClassOf(<http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy> owl:Thing)
+
+# Class: <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> (Transportation)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> "Transportation")
+SubClassOf(<http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln> owl:Thing)
+
+# Class: :Adult (Adult)
+
+AnnotationAssertion(rdfs:label :Adult "Adult"^^xsd:string)
+SubClassOf(:Adult <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>)
+
+# Class: :Age (Age)
+
+AnnotationAssertion(rdfs:label :Age "Age"^^xsd:string)
+SubClassOf(:Age <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ>)
+
+# Class: :Air (Air Transportation)
+
+AnnotationAssertion(rdfs:label :Air "Air Transportation"^^xsd:string)
+SubClassOf(:Air <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>)
+
+# Class: :Animal (Animal)
+
+AnnotationAssertion(rdfs:label :Animal "Animal"^^xsd:string)
+SubClassOf(:Animal owl:Thing)
+
+# Class: :Dimensions (:Dimensions)
+
+SubClassOf(:Dimensions owl:Thing)
+
+# Class: :Fuel (Fuel)
+
+AnnotationAssertion(rdfs:label :Fuel "Fuel"^^xsd:string)
+SubClassOf(:Fuel owl:Thing)
+
+# Class: :Gender (Gender)
+
+AnnotationAssertion(rdfs:label :Gender "Gender"^^xsd:string)
+SubClassOf(:Gender <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ>)
+
+# Class: :Ground (Ground Transportation)
+
+AnnotationAssertion(rdfs:label :Ground "Ground Transportation"^^xsd:string)
+SubClassOf(:Ground <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>)
+
+# Class: :Hobby (Hobby)
+
+AnnotationAssertion(rdfs:label :Hobby "Hobby"^^xsd:string)
+
+# Class: :Instruments (Instrument)
+
+AnnotationAssertion(rdfs:label :Instruments "Instrument"^^xsd:string)
+
+# Class: :Nationality (Nationality)
+
+AnnotationAssertion(rdfs:label :Nationality "Nationality"^^xsd:string)
+SubClassOf(:Nationality <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ>)
+
+# Class: :RoadConditions (RoadConditions)
+
+AnnotationAssertion(rdfs:label :RoadConditions "RoadConditions"^^xsd:string)
+SubClassOf(:RoadConditions owl:Thing)
+
+# Class: :Toy (Toy)
+
+AnnotationAssertion(rdfs:label :Toy "Toy"^^xsd:string)
+
+# Class: :Water (Water Transportation)
+
+AnnotationAssertion(rdfs:label :Water "Water Transportation"^^xsd:string)
+SubClassOf(:Water <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>)
+
+# Class: :Weather (:Weather)
+
+SubClassOf(:Weather owl:Thing)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu> (Female)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu> "Female")
+ClassAssertion(:Gender <http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu>)
+SameIndividual(<http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu> :Unisex)
+
+# Individual: <http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh> (Male)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh> "Male")
+ClassAssertion(:Gender <http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh>)
+SameIndividual(<http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh> :Unisex)
+
+# Individual: :Big (:Big)
+
+ClassAssertion(:Dimensions :Big)
+
+# Individual: :Cars (Car)
+
+AnnotationAssertion(rdfs:label :Cars "Car"^^xsd:string)
+ClassAssertion(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> :Cars)
+ClassAssertion(:Ground :Cars)
+ClassAssertion(:Toy :Cars)
+ObjectPropertyAssertion(:runsOn :Cars :Diesel)
+ObjectPropertyAssertion(:runsOn :Cars :Petrol)
+
+# Individual: :Cats (Cat)
+
+AnnotationAssertion(rdfs:label :Cats "Cat"^^xsd:string)
+ClassAssertion(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> :Cats)
+ClassAssertion(:Animal :Cats)
+ClassAssertion(:Toy :Cats)
+
+# Individual: :Cloudy (:Cloudy)
+
+ClassAssertion(:Weather :Cloudy)
+
+# Individual: :Diesel (:Diesel)
+
+ClassAssertion(:Fuel :Diesel)
+
+# Individual: :Dogs (Dog)
+
+AnnotationAssertion(rdfs:label :Dogs "Dog"^^xsd:string)
+ClassAssertion(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> :Dogs)
+ClassAssertion(:Animal :Dogs)
+ClassAssertion(:Toy :Dogs)
+
+# Individual: :Guitar (:Guitar)
+
+ClassAssertion(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> :Guitar)
+ClassAssertion(:Instruments :Guitar)
+ClassAssertion(:Toy :Guitar)
+
+# Individual: :Hamster (:Hamster)
+
+ClassAssertion(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> :Hamster)
+ClassAssertion(:Animal :Hamster)
+ClassAssertion(:Toy :Hamster)
+
+# Individual: :Helicopter (:Helicopter)
+
+ClassAssertion(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> :Helicopter)
+ClassAssertion(:Air :Helicopter)
+ClassAssertion(:Toy :Helicopter)
+
+# Individual: :Hot_Air_Baloon (:Hot_Air_Baloon)
+
+ClassAssertion(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> :Hot_Air_Baloon)
+ClassAssertion(:Air :Hot_Air_Baloon)
+ClassAssertion(:Toy :Hot_Air_Baloon)
+
+# Individual: :Huge (:Huge)
+
+ClassAssertion(:Dimensions :Huge)
+
+# Individual: :Icy (:Icy)
+
+ClassAssertion(:RoadConditions :Icy)
+
+# Individual: :Kerosene (:Kerosene)
+
+ClassAssertion(:Fuel :Kerosene)
+
+# Individual: :Magic (:Magic)
+
+ClassAssertion(:Fuel :Magic)
+
+# Individual: :Medium (:Medium)
+
+ClassAssertion(:Dimensions :Medium)
+
+# Individual: :Petrol (:Petrol)
+
+ClassAssertion(:Fuel :Petrol)
+
+# Individual: :Piano (:Piano)
+
+ClassAssertion(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> :Piano)
+ClassAssertion(:Instruments :Piano)
+ClassAssertion(:Toy :Piano)
+
+# Individual: :Plane (:Plane)
+
+ClassAssertion(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> :Plane)
+ClassAssertion(:Air :Plane)
+ClassAssertion(:Toy :Plane)
+ObjectPropertyAssertion(:runsOn :Plane :Kerosene)
+
+# Individual: :Playing (Playing)
+
+AnnotationAssertion(rdfs:label :Playing "Playing"^^xsd:string)
+ClassAssertion(:Hobby :Playing)
+
+# Individual: :Pool (:Pool)
+
+ClassAssertion(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> :Pool)
+ClassAssertion(:Toy :Pool)
+ObjectPropertyAssertion(<http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> :Pool :Swimming)
+ObjectPropertyAssertion(:hasDimension :Pool :Big)
+ObjectPropertyAssertion(:weatherIs :Pool :Cloudy)
+ObjectPropertyAssertion(:weatherIs :Pool :Sunny)
+DataPropertyAssertion(:isWealthy :Pool "true"^^xsd:boolean)
+
+# Individual: :Racecars (:Racecars)
+
+ClassAssertion(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> :Racecars)
+ClassAssertion(:Ground :Racecars)
+ClassAssertion(:Toy :Racecars)
+ObjectPropertyAssertion(<http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> :Racecars :Cars)
+ObjectPropertyAssertion(<http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> :Racecars :Playing)
+
+# Individual: :Rainy (:Rainy)
+
+ClassAssertion(:Weather :Rainy)
+
+# Individual: :Reindeer (:Reindeer)
+
+ClassAssertion(:Animal :Reindeer)
+
+# Individual: :Reindeer_Sleigh (:Reindeer_Sleigh)
+
+ClassAssertion(:Air :Reindeer_Sleigh)
+ObjectPropertyAssertion(:runsOn :Reindeer_Sleigh :Magic)
+
+# Individual: :Romania (:Romania)
+
+ClassAssertion(:Nationality :Romania)
+
+# Individual: :Rough (:Rough)
+
+ClassAssertion(:RoadConditions :Rough)
+
+# Individual: :SUV (:SUV)
+
+ClassAssertion(:Ground :SUV)
+ObjectPropertyAssertion(<http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> :SUV :Cars)
+ObjectPropertyAssertion(:runsOn :SUV :Diesel)
+DataPropertyAssertion(:hasBeenNice :SUV "true"^^xsd:boolean)
+DataPropertyAssertion(:isWealthy :SUV "true"^^xsd:boolean)
+
+# Individual: :Singing (:Singing)
+
+ClassAssertion(:Hobby :Singing)
+
+# Individual: :Smal (Small)
+
+AnnotationAssertion(rdfs:label :Smal "Small"^^xsd:string)
+ClassAssertion(:Dimensions :Smal)
+
+# Individual: :Snowing (:Snowing)
+
+ClassAssertion(:Weather :Snowing)
+
+# Individual: :Storm (:Storm)
+
+ClassAssertion(:Weather :Storm)
+
+# Individual: :Sunny (:Sunny)
+
+ClassAssertion(:Weather :Sunny)
+
+# Individual: :Swimming (:Swimming)
+
+ClassAssertion(:Hobby :Swimming)
+
+# Individual: :Unisex (:Unisex)
+
+ClassAssertion(:Gender :Unisex)
+
+# Individual: :Violin (:Violin)
+
+ClassAssertion(<http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY> :Violin)
+ClassAssertion(:Instruments :Violin)
+ClassAssertion(:Toy :Violin)
+ObjectPropertyAssertion(<http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx> :Violin :Playing)
+NegativeObjectPropertyAssertion(:hasDisinterest :Violin :Singing)
+DataPropertyAssertion(:hasBeenNaughty :Violin "false"^^xsd:boolean)
+DataPropertyAssertion(:hasBeenNice :Violin "true"^^xsd:boolean)
+DataPropertyAssertion(:isWealthy :Violin "true"^^xsd:boolean)
+
+# Individual: :smooth (Smooth)
+
+AnnotationAssertion(rdfs:label :smooth "Smooth"^^xsd:string)
+ClassAssertion(:RoadConditions :smooth)
+
+
+)

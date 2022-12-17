@@ -1,0 +1,762 @@
+Prefix: : <urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <urn:webprotege:ontology:89bb672b-70cf-444c-b181-b6385a36d185>
+
+
+Annotations: 
+    <http://purl.org/dc/elements/1.1/creator> "Adrian Hamod"^^xsd:string,
+    <http://purl.org/dc/elements/1.1/creator> "Dorian Olarescu"^^xsd:string,
+    rdfs:label "Gift-o-finder"^^xsd:string
+
+AnnotationProperty: <http://purl.org/dc/elements/1.1/creator>
+
+    
+AnnotationProperty: <http://webprotege.stanford.edu/R7Npv4afvFRkLvgxhbpyi8R>
+
+    Annotations: 
+        rdfs:label "https://schema.org/gender"
+    
+    
+AnnotationProperty: <http://webprotege.stanford.edu/RCSaijTh71Uo6iuBYo9vzQj>
+
+    Annotations: 
+        rdfs:label "http://schema.org/Place"
+    
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:boolean
+
+    
+Datatype: xsd:positiveInteger
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: <http://webprotege.stanford.edu/R87qT9Mu7sgRpXO1eGPVyVe>
+
+    Annotations: 
+        rdfs:label "hasGender"^^xsd:string
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx>
+
+    Annotations: 
+        rdfs:label "likes"^^xsd:string
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    DisjointWith: 
+        hasDisinterest
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>
+    
+    Range: 
+        <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>
+    
+    
+ObjectProperty: doesNotRunOn
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>
+    
+    Range: 
+        Fuel
+    
+    InverseOf: 
+        runsOn
+    
+    
+ObjectProperty: drivenBy
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    DisjointWith: 
+        drives
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>
+    
+    Range: 
+        <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>
+    
+    InverseOf: 
+        drives
+    
+    
+ObjectProperty: drives
+
+    DisjointWith: 
+        drivenBy
+    
+    Domain: 
+        <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>
+    
+    Range: 
+        <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>
+    
+    InverseOf: 
+        drivenBy
+    
+    
+ObjectProperty: hasDimension
+
+    Characteristics: 
+        Asymmetric
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>
+    
+    Range: 
+        Dimensions
+    
+    
+ObjectProperty: hasDisinterest
+
+    Annotations: 
+        rdfs:label "dislikes"^^xsd:string
+    
+    DisjointWith: 
+        <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx>
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>
+    
+    
+ObjectProperty: isFrom
+
+    Annotations: 
+        rdfs:label "isFrom"^^xsd:string
+    
+    Characteristics: 
+        Transitive
+    
+    Domain: 
+        Nationality
+    
+    Range: 
+        Nationality
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    Domain: 
+        <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>
+    
+    Range: 
+        Fuel
+    
+    
+ObjectProperty: runsOn
+
+    Annotations: 
+        rdfs:label "runsOn"^^xsd:string
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>
+    
+    Range: 
+        Fuel
+    
+    InverseOf: 
+        doesNotRunOn
+    
+    
+ObjectProperty: transportedWith
+
+    Annotations: 
+        rdfs:label "transportedWith"^^xsd:string
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>
+    
+    Range: 
+        <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>
+    
+    
+ObjectProperty: weatherIs
+
+    Annotations: 
+        rdfs:label "usedWhenWeatherIs"^^xsd:string
+    
+    
+DataProperty: hasAge
+
+    Annotations: 
+        rdfs:label "requiresAge"^^xsd:string
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>
+    
+    Range: 
+        xsd:positiveInteger
+    
+    
+DataProperty: hasBeenNaughty
+
+    Annotations: 
+        rdfs:label "requiresBeingNaughty"^^xsd:string
+    
+    Characteristics: 
+        Functional
+    
+    Range: 
+        xsd:boolean
+    
+    DisjointWith: 
+        hasBeenNice
+    
+    
+DataProperty: hasBeenNice
+
+    Annotations: 
+        rdfs:label "requiresBeingNice"^^xsd:string
+    
+    Characteristics: 
+        Functional
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>
+    
+    Range: 
+        xsd:boolean
+    
+    DisjointWith: 
+        hasBeenNaughty
+    
+    
+DataProperty: isWealthy
+
+    Annotations: 
+        rdfs:label "isExpensive"^^xsd:string
+    
+    Domain: 
+        <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>
+    
+    Range: 
+        xsd:boolean
+    
+    
+Class: <http://webprotege.stanford.edu/R8TRUkroyU0QaBuitbvnVqI>
+
+    Annotations: 
+        rdfs:label "Child"^^xsd:string
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>
+    
+    DisjointWith: 
+        Adult
+    
+    
+Class: <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>
+
+    Annotations: 
+        rdfs:label "Gift"^^xsd:string
+    
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ>
+
+    Annotations: 
+        rdfs:label "Demographic"^^xsd:string
+    
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>
+
+    Annotations: 
+        rdfs:label "Person"^^xsd:string
+    
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>
+
+    Annotations: 
+        rdfs:label "Transportation"
+    
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: Adult
+
+    Annotations: 
+        rdfs:label "Adult"^^xsd:string
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RRj82JT2v8eCwIsNHq8vNy>
+    
+    DisjointWith: 
+        <http://webprotege.stanford.edu/R8TRUkroyU0QaBuitbvnVqI>
+    
+    
+Class: Age
+
+    Annotations: 
+        rdfs:label "Age"^^xsd:string
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ>
+    
+    
+Class: Air
+
+    Annotations: 
+        rdfs:label "Air Transportation"^^xsd:string
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>
+    
+    
+Class: Animal
+
+    Annotations: 
+        rdfs:label "Animal"^^xsd:string
+    
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: Dimensions
+
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: Fuel
+
+    Annotations: 
+        rdfs:label "Fuel"^^xsd:string
+    
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: Gender
+
+    Annotations: 
+        rdfs:label "Gender"^^xsd:string
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ>
+    
+    
+Class: Ground
+
+    Annotations: 
+        rdfs:label "Ground Transportation"^^xsd:string
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>
+    
+    
+Class: Hobby
+
+    Annotations: 
+        rdfs:label "Hobby"^^xsd:string
+    
+    
+Class: Instruments
+
+    Annotations: 
+        rdfs:label "Instrument"^^xsd:string
+    
+    
+Class: Nationality
+
+    Annotations: 
+        rdfs:label "Nationality"^^xsd:string
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/RGwGuSOTycRJtJwfummBgQ>
+    
+    
+Class: RoadConditions
+
+    Annotations: 
+        rdfs:label "RoadConditions"^^xsd:string
+    
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: Toy
+
+    Annotations: 
+        rdfs:label "Toy"^^xsd:string
+    
+    
+Class: Water
+
+    Annotations: 
+        rdfs:label "Water Transportation"^^xsd:string
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/Rzv7RjRAXz0MvJZPMZEYln>
+    
+    
+Class: Weather
+
+    SubClassOf: 
+        owl:Thing
+    
+    
+Class: owl:Thing
+
+    
+Individual: <http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu>
+
+    Annotations: 
+        rdfs:label "Female"
+    
+    Types: 
+        Gender
+    
+    SameAs: 
+        Unisex
+    
+    
+Individual: <http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh>
+
+    Annotations: 
+        rdfs:label "Male"
+    
+    Types: 
+        Gender
+    
+    SameAs: 
+        Unisex
+    
+    
+Individual: Big
+
+    Types: 
+        Dimensions
+    
+    
+Individual: Cars
+
+    Annotations: 
+        rdfs:label "Car"^^xsd:string
+    
+    Types: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>,
+        Ground,
+        Toy
+    
+    Facts:  
+     runsOn  Diesel,
+     runsOn  Petrol
+    
+    
+Individual: Cats
+
+    Annotations: 
+        rdfs:label "Cat"^^xsd:string
+    
+    Types: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>,
+        Animal,
+        Toy
+    
+    
+Individual: Cloudy
+
+    Types: 
+        Weather
+    
+    
+Individual: Diesel
+
+    Types: 
+        Fuel
+    
+    
+Individual: Dogs
+
+    Annotations: 
+        rdfs:label "Dog"^^xsd:string
+    
+    Types: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>,
+        Animal,
+        Toy
+    
+    
+Individual: Guitar
+
+    Types: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>,
+        Instruments,
+        Toy
+    
+    
+Individual: Hamster
+
+    Types: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>,
+        Animal,
+        Toy
+    
+    
+Individual: Helicopter
+
+    Types: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>,
+        Air,
+        Toy
+    
+    
+Individual: Hot_Air_Baloon
+
+    Types: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>,
+        Air,
+        Toy
+    
+    
+Individual: Huge
+
+    Types: 
+        Dimensions
+    
+    
+Individual: Icy
+
+    Types: 
+        RoadConditions
+    
+    
+Individual: Kerosene
+
+    Types: 
+        Fuel
+    
+    
+Individual: Magic
+
+    Types: 
+        Fuel
+    
+    
+Individual: Medium
+
+    Types: 
+        Dimensions
+    
+    
+Individual: Petrol
+
+    Types: 
+        Fuel
+    
+    
+Individual: Piano
+
+    Types: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>,
+        Instruments,
+        Toy
+    
+    
+Individual: Plane
+
+    Types: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>,
+        Air,
+        Toy
+    
+    Facts:  
+     runsOn  Kerosene
+    
+    
+Individual: Playing
+
+    Annotations: 
+        rdfs:label "Playing"^^xsd:string
+    
+    Types: 
+        Hobby
+    
+    
+Individual: Pool
+
+    Types: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>,
+        Toy
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx>  Swimming,
+     hasDimension  Big,
+     weatherIs  Cloudy,
+     weatherIs  Sunny,
+     isWealthy  true
+    
+    
+Individual: Racecars
+
+    Types: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>,
+        Ground,
+        Toy
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx>  Cars,
+     <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx>  Playing
+    
+    
+Individual: Rainy
+
+    Types: 
+        Weather
+    
+    
+Individual: Reindeer
+
+    Types: 
+        Animal
+    
+    
+Individual: Reindeer_Sleigh
+
+    Types: 
+        Air
+    
+    Facts:  
+     runsOn  Magic
+    
+    
+Individual: Romania
+
+    Types: 
+        Nationality
+    
+    
+Individual: Rough
+
+    Types: 
+        RoadConditions
+    
+    
+Individual: SUV
+
+    Types: 
+        Ground
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx>  Cars,
+     runsOn  Diesel,
+     hasBeenNice  true,
+     isWealthy  true
+    
+    
+Individual: Singing
+
+    Types: 
+        Hobby
+    
+    
+Individual: Smal
+
+    Annotations: 
+        rdfs:label "Small"^^xsd:string
+    
+    Types: 
+        Dimensions
+    
+    
+Individual: Snowing
+
+    Types: 
+        Weather
+    
+    
+Individual: Storm
+
+    Types: 
+        Weather
+    
+    
+Individual: Sunny
+
+    Types: 
+        Weather
+    
+    
+Individual: Swimming
+
+    Types: 
+        Hobby
+    
+    
+Individual: Unisex
+
+    Types: 
+        Gender
+    
+    SameAs: 
+        <http://webprotege.stanford.edu/R8esnD6Np64btT2p4gsA4Bu>,
+        <http://webprotege.stanford.edu/RDD9850A4onwJQMCZlk5vQh>
+    
+    
+Individual: Violin
+
+    Types: 
+        <http://webprotege.stanford.edu/RCElep86tisoqkZgc5t1eXY>,
+        Instruments,
+        Toy
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R9r48BzJI603KKLHW3KN7fx>  Playing,
+      not  hasDisinterest  Singing,
+     hasBeenNaughty  false,
+     hasBeenNice  true,
+     isWealthy  true
+    
+    
+Individual: smooth
+
+    Annotations: 
+        rdfs:label "Smooth"^^xsd:string
+    
+    Types: 
+        RoadConditions
+    
+    
